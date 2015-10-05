@@ -1,0 +1,6 @@
+<html t:type="layout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<h1 style="position: center">Index page</h1>
+<a t:type="pagelink" page="Read" context="[1,'Sanya']">Click here</a>
+<a t:type="pagelink" page="index">OK?</a>
+</html>

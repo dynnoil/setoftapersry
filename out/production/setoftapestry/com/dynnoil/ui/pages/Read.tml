@@ -1,0 +1,8 @@
+<html t:type="layout"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+<h1>Welcome to the party, gus</h1>
+<h1>
+    ${nameOfArticle}
+</h1>
+</html>
