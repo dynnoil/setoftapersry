@@ -1,0 +1,15 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+    <head>
+        <title>Hello World Page</title>
+    </head>
+    <body style="background-color: #fad354">
+    <div style="position: absolute; left: 100px; top: 5px; height:  250px; width: 1366px;">
+        <h1>Hello World</h1>
+    </div>
+    <h2>
+        Value of test is ${getTestVar()}
+    </h2>
+
+    <img src="https://yandex.ru/images/today?size=1920x1080"/>
+    </body>
+</html>

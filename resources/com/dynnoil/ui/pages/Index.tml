@@ -1,6 +1,12 @@
 <html t:type="layout"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
 <h1>Index page</h1>
-<a t:type="pagelink" page="Read" context="[1,'Sanya']">Click here</a>
-<p>Something</p>
+<ul>
+    <li>
+        <a t:type="actionlink" t:id="toTest">[here is redirection by instance of class page]</a>
+    </li>
+    <li>
+        <a t:type="pagelink" page="fortesting" context="['Vasily', 233]">[here is activation context]</a>
+    </li>
+</ul>
 </html>
