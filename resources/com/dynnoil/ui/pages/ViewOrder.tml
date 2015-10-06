@@ -3,6 +3,7 @@
         <title>Hello World Page</title>
     </head>
     <body>
-        <h1>Hello hallo</h1>
+        <h1>Add some goods...</h1>
+        <a t:type="eventlink" event="addGood">Add good...</a>
     </body>
 </html>

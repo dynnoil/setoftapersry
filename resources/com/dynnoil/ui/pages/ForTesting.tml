@@ -9,7 +9,8 @@
     <h2>
         Value of test is ${getTestVar()}
     </h2>
-
-    <img src="https://yandex.ru/images/today?size=1920x1080"/>
+    <h4>
+        <a t:type="actionlink" t:id="goIndex">return Index</a>
+    </h4>
     </body>
 </html>

@@ -11,3 +11,22 @@ div {
     width: auto;
     height: auto;
 }
+
+#forTime {
+    width: 10%;
+    height: 50px;
+    margin-bottom: 5px;
+    border: solid 1px black;
+    background-color: #ec95a3;
+    font-size: 22px;
+    float: right;
+    clear: both;
+    display: block;
+}
+
+#checkTable {
+    width: 25%;
+    height: 25%;
+    background-color: #fff4a8;
+    border: solid 2px black;
+}

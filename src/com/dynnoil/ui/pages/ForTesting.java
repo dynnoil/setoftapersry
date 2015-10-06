@@ -20,6 +20,10 @@ public class ForTesting {
         return testVar;
     }
 
+    Object onActionFromGoIndex() {
+        return Index.class;
+    }
+
     void onActivate(String testVar, Integer index) {
         this.testVar = testVar;
         this.index = index;
