@@ -1,9 +1,10 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
     <head>
         <title>Hello World Page</title>
     </head>
     <body>
         <h1>Add some goods...</h1>
-        <a t:type="eventlink" event="addGood">Add good...</a>
+        <!--<a t:type="eventlink" event="addGood">Add good...</a>!-->
     </body>
 </html>

@@ -23,4 +23,7 @@ public class CheckOut {
     @Property
     private double sum = checkOut.getSummary();
 
+    @Property
+    private String[] goods = checkOut.getGoods();
+
 }

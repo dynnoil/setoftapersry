@@ -1,4 +1,5 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
     <head>
         <title>Hello World Page</title>
     </head>

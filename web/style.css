@@ -30,3 +30,10 @@ div {
     background-color: #fff4a8;
     border: solid 2px black;
 }
+
+.checkItems {
+    font-family: Caption;
+    font-size: 24px;
+    font-style: italic;
+    color: black;
+}

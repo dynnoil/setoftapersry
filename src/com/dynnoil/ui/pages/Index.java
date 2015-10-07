@@ -20,7 +20,7 @@ public class Index {
     private Integer minutes;
 
     @Property
-    @Persist(PersistenceConstants.FLASH)
+    @Persist(PersistenceConstants.SESSION)
     private Integer randomNumber;
 
     @InjectPage
@@ -31,7 +31,7 @@ public class Index {
         return this.test;
     }
 
-    void pageLoaded() {
+    void onActivate() {
         currentDate = new Date();
         hours = currentDate.getHours();
         minutes = currentDate.getMinutes();

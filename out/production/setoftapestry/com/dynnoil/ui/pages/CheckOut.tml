@@ -1,17 +1,20 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
     <head>
         <title>Hello World Page</title>
     </head>
     <body>
         <h1>Check out</h1>
-        <div>
-            <p>
+        <div id="checkTable">
+            <h3>
                 <span>ID:</span> ${getID()}
-            </p>
-            <p>
+            </h3>
+            <ul t:type="loop" source="goods" value="var:Good">
+                <li>${var:Good}</li>
+            </ul>
+            <p class = "checkItems">
                 <span>Total:</span> ${getSum()}
             </p>
         </div>
-
     </body>
 </html>

@@ -1,7 +1,9 @@
 package com.dynnoil.store.order;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -10,19 +12,26 @@ import java.util.List;
 public class Order implements Serializable {
 
     private int ID;
-    private List<String> buying;
+    private LinkedList<String> buying;
     private double summary;
-
 
     public Order() {
         this.ID = this.hashCode();
-        this.buying = null;
+        this.buying = new LinkedList<String>();
         this.summary = 0;
     }
 
     public void addGood(String good) {
-        buying.add(good);
-        summary+=10;
+        this.summary += 10;
+        this.buying.add(good);
+    }
+
+    public String[] getGoods() {
+        String[] total = new String[buying.size()];
+        for (int i = 0; i < total.length; i++) {
+            total[i] = buying.get(i);
+        }
+        return total;
     }
 
     public int getID() {
