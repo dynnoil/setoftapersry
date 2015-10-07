@@ -4,13 +4,6 @@ body {
     background-color: #d9f7f7;
 }
 
-div {
-    background-color: aquamarine;
-    padding: 100px;
-    position: absolute;
-    width: auto;
-    height: auto;
-}
 
 #forTime {
     width: 10%;

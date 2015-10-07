@@ -16,5 +16,10 @@
                 <span>Total:</span> ${getSum()}
             </p>
         </div>
+    <form t:type="form" clientValidation="none" t:id="checkPlease">
+        <div>
+            <input t:type="submit" value="Pay"></input>
+        </div>
+    </form>
     </body>
 </html>

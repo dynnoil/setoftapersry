@@ -4,7 +4,20 @@
         <title>Hello World Page</title>
     </head>
     <body>
-        <h1>Add some goods...</h1>
-        <a t:type="eventlink" event="addGood">Add good...</a>
+        <h1>Add what you want</h1>
+        <form t:type="form" t:id="orderForm" clientValidation="none">
+            <div>
+                <select t:type="select" value="good" validate="required"
+                        model="options"/>
+            </div>
+
+            <div style="display: block">
+                <input t:type="submit" value="Add a good"/>
+            </div>
+
+        </form>
+    <div>
+        <a t:type="pagelink" page="checkout">check out...</a>
+    </div>
     </body>
 </html>

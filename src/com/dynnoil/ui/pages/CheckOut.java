@@ -2,6 +2,7 @@ package com.dynnoil.ui.pages;
 
 import com.dynnoil.store.order.Order;
 import com.sun.xml.internal.ws.api.PropertySet;
+import org.apache.tapestry5.annotations.PageReset;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
@@ -9,8 +10,8 @@ import org.apache.tapestry5.annotations.SessionState;
 /**
  * Created by krukov on 06.10.2015.
  */
-public class CheckOut {
 
+public class CheckOut {
 
     @SessionState
     private Order checkOut;
@@ -25,5 +26,14 @@ public class CheckOut {
 
     @Property
     private String[] goods = checkOut.getGoods();
+
+    Object onSuccess() {
+        return ForTesting.class;
+    }
+
+    void pageReset() {
+        checkOut = null;
+    }
+
 
 }

@@ -1,0 +1,19 @@
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+    <form t:type="form" t:id="loginForm">
+        <t:errors/>
+        <div>
+            <label t:type="label" for="userName"/>
+            <input t:type="textfield" t:id="userName" value="user.name"/>
+        </div>
+
+        <div>
+            <label t:type="label" for="password"/>
+            <input t:type="passwordfield" t:id="password" value="user.password"/>
+        </div>
+
+        <div>
+            <input t:type="submit" value="${message:submit-value}"/>
+        </div>
+    </form>
+</html>
