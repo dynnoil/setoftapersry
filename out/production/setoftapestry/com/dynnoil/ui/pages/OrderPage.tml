@@ -1,0 +1,24 @@
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+    <head>
+        <title>Order page</title>
+    </head>
+    <body>
+        <h2>Please, choose goods below</h2>
+        <form t:type="form" t:id="orderForm" clientValidation="none">
+           <t:errors/>
+           <div>
+               <input t:type="palette" model="model" selected="goods" encoder="encoder"/>
+           </div>
+            <p> </p>
+            <div>
+                Chose recieving date:
+                <input t:type="datefield" t:id="recievedField" value="recievedDate"/>
+            </div>
+            <p> </p>
+            <div>
+                <input t:type="submit" value="Continue [Checkout]"/>
+            </div>
+        </form>
+    </body>
+</html>

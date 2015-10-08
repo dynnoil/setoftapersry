@@ -10,7 +10,7 @@
         <a t:type="pagelink" page="fortesting" context="['Vasily', 233]">[here is activation context]</a>
     </li>
     <li>
-        <a t:type="pagelink" page="vieworder">[BUY!!!!BUY!!!!BUY!!!!]</a>
+        <a t:type="pagelink" page="orderpage">[BUY!!!!BUY!!!!BUY!!!!]</a>
     </li>
     <li>
         <a t:type="pagelink" page="login">[login]</a>

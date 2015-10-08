@@ -1,11 +1,12 @@
 package com.dynnoil.ui.pages;
 
+import com.dynnoil.store.order.Goods;
 import com.dynnoil.store.order.Order;
-import com.sun.xml.internal.ws.api.PropertySet;
-import org.apache.tapestry5.annotations.PageReset;
-import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by krukov on 06.10.2015.
@@ -13,26 +14,62 @@ import org.apache.tapestry5.annotations.SessionState;
 
 public class CheckOut {
 
+
+    /**
+     * SSO of Order class
+     */
     @SessionState
-    private Order checkOut;
+    private Order usersOrder;
 
-
+    /**
+     * Order's ID
+     */
     @Property
-    private int ID = checkOut.getID();
+    private int ID;
 
-
+    /**
+     * Order's current currentDate
+     */
     @Property
-    private double sum = checkOut.getSummary();
+    private Date currentDate;
 
+    /**
+     * Order's recieved date
+     */
     @Property
-    private String[] goods = checkOut.getGoods();
+    private Date recievedDate;
+
+    /**
+     * Total order's sum
+     */
+    @Property
+    private double totalSum;
+
+    /**
+     * List of user's goods
+     */
+    @Property
+    private String[] goods;
+
+    void pageLoaded() {
+        onActivate();
+    }
+
+
+    void onActivate() {
+        ID = usersOrder.getID();
+        currentDate = usersOrder.getCurrentDate();
+        recievedDate = usersOrder.getRecievedDate();
+        totalSum = usersOrder.getTotal();
+        goods = usersOrder.getGoods();
+    }
 
     Object onSuccess() {
         return ForTesting.class;
     }
 
-    void pageReset() {
-        checkOut = null;
+    Object onBack() {
+        return OrderPage.class;
     }
 
 

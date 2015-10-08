@@ -4,20 +4,28 @@
         <title>Hello World Page</title>
     </head>
     <body>
-        <h1>Check out</h1>
-        <div id="checkTable">
+        <h1>Your order:</h1>
+        <div>
             <h3>
-                <span>ID:</span> ${getID()}
+                <span>Order's ID:</span> ${getID()}
             </h3>
-            <ul t:type="loop" source="goods" value="var:Good">
+            <p>
+                Orders' date: ${getCurrentDate()}
+            </p>
+            <p>
+                Recieving date: ${getRecievedDate()}
+            </p>
+            <h3>Your goods:</h3>
+            <ul style="font-size: 12px" t:type="loop" source="goods" value="var:Good">
                 <li>${var:Good}</li>
             </ul>
-            <p class = "checkItems">
-                <span>Total:</span> ${getSum()}
-            </p>
+            <h3>
+                Total: ${getTotalSum()} RU
+            </h3>
         </div>
     <form t:type="form" clientValidation="none" t:id="checkPlease">
         <div>
+            <input t:type="submit" value="Back" event="back"/>
             <input t:type="submit" value="Pay"></input>
         </div>
     </form>
