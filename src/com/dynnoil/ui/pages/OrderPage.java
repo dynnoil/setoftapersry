@@ -47,6 +47,11 @@ public class OrderPage {
     @Inject
     private Messages messages;
 
+    /**
+     * Service for creating value encoder
+     * which makes translations between server-side
+     * and client-side
+     */
     @Inject
     private ValueEncoderSource valueEncoderSource;
 
@@ -65,15 +70,26 @@ public class OrderPage {
         return valueEncoderSource.getValueEncoder(Goods.class);
     }
 
+    /**
+     * Method runs on form's preparing to
+     * submission and rendering
+     */
     void onPrepare() {
         this.ordersDate = usersOrder.getCurrentDate();
     }
 
-
+    /**
+     * Method runs on validation form's class
+     */
     void onValidate() {
         usersOrder.removeGoods();
     }
 
+    /**
+     * Method runs on success form'class's submission
+     *
+     * @return
+     */
     Object onSuccess() {
         usersOrder.addGoods(this.goods);
         usersOrder.setRecievedDate(recievedDate);

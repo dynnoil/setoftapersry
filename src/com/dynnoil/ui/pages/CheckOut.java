@@ -4,8 +4,6 @@ import com.dynnoil.store.order.Goods;
 import com.dynnoil.store.order.Order;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
-
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -51,11 +49,18 @@ public class CheckOut {
     @Property
     private String[] goods;
 
+    /**
+     * Stage of a page, which runs after
+     * page's creation
+     */
     void pageLoaded() {
         onActivate();
     }
 
-
+    /**
+     * Method runs when page's
+     * starting to be active
+     */
     void onActivate() {
         ID = usersOrder.getID();
         currentDate = usersOrder.getCurrentDate();
@@ -65,9 +70,17 @@ public class CheckOut {
     }
 
     Object onSuccess() {
-        return ForTesting.class;
+        return ShippingPage.class;
     }
 
+    /**
+     * Handler event method for
+     * redirection to another page from
+     * cache (if it exists) or by creating it
+     * otherwise
+     *
+     * @return new page
+     */
     Object onBack() {
         return OrderPage.class;
     }

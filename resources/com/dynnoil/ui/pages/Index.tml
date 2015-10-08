@@ -12,9 +12,6 @@
     <li>
         <a t:type="pagelink" page="orderpage">[BUY!!!!BUY!!!!BUY!!!!]</a>
     </li>
-    <li>
-        <a t:type="pagelink" page="login">[login]</a>
-    </li>
 </ul>
 <h4>
     Look at the random number: ${getRandomNumber()}

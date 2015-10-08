@@ -3,6 +3,8 @@ package com.dynnoil.store.order;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Class presents lite version of users's order in Internet store
