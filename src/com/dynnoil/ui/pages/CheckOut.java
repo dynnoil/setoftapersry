@@ -1,9 +1,15 @@
 package com.dynnoil.ui.pages;
 
-import com.dynnoil.store.order.Goods;
+import com.dynnoil.store.order.Address;
 import com.dynnoil.store.order.Order;
+import com.dynnoil.ui.services.AppModule;
+import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.corelib.components.BeanEditForm;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.ioc.annotations.InjectService;
+
 import java.util.Date;
 
 /**
@@ -38,6 +44,12 @@ public class CheckOut {
     private Date recievedDate;
 
     /**
+     * Address to ship to
+     */
+    @Property
+    private Address address;
+
+    /**
      * Total order's sum
      */
     @Property
@@ -48,6 +60,10 @@ public class CheckOut {
      */
     @Property
     private String[] goods;
+
+    @Property
+    @Persist
+    private Long numberOfCreditCard;
 
     /**
      * Stage of a page, which runs after
@@ -67,7 +83,9 @@ public class CheckOut {
         recievedDate = usersOrder.getRecievedDate();
         totalSum = usersOrder.getTotal();
         goods = usersOrder.getGoods();
+        address = usersOrder.getShippingAddress();
     }
+
 
     Object onSuccess() {
         return ShippingPage.class;

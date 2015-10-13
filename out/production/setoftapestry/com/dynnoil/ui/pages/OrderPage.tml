@@ -6,7 +6,6 @@
     <body>
         <h2>Please, choose goods below</h2>
         <form t:type="form" t:id="orderForm" clientValidation="none">
-           <t:errors/>
            <div>
                <input t:type="palette" model="model" selected="goods" encoder="encoder"/>
            </div>
@@ -14,8 +13,39 @@
             <div>
                 Chose recieving date:
                 <input t:type="datefield" t:id="recievedField" value="recievedDate"/>
+                <t:error for="recievedField"/>
             </div>
             <p> </p>
+
+            <div>
+                <t:label for="shipToAddress"/>
+                <input t:type="checkbox" t:id="shipToAddress"
+                       t:mixins="triggerfragment"
+                       fragment="shippingAddress"/>
+            </div>
+            <t:formfragment t:id="shippingAddress"
+                            visible="shipToAddress">
+                <h2>Shipping address</h2>
+                <div>
+                    <label t:type="label" for="shippingStreet"/>
+                    <input t:type="textfield" t:id="shippingStreet"
+                           value="shippingAddress.street"
+                           validate="required"/>
+                </div>
+                <div>
+                    <label t:type="label" for="shippingCity"/>
+                    <input t:type="textfield" t:id="shippingCity"
+                           value="shippingAddress.city"
+                           validate="required"/>
+                </div>
+                <div>
+                    <label t:type="label" for="shippingZip"/>
+                    <input t:type="textfield" t:id="shippingZip"
+                           value="shippingAddress.zipCode"
+                           validate="required"/>
+                </div>
+            </t:formfragment>
+
             <div>
                 <input t:type="submit" value="Continue [Checkout]"/>
             </div>

@@ -15,6 +15,7 @@
             <p>
                 Recieving date: ${getRecievedDate()}
             </p>
+            <p>Address: ${address}</p>
             <h3>Your goods:</h3>
             <ul style="font-size: 12px" t:type="loop" source="goods" value="var:Good">
                 <li>${var:Good}</li>
@@ -25,8 +26,14 @@
         </div>
     <form t:type="form" clientValidation="none" t:id="checkPlease">
         <div>
-            <input t:type="submit" value="Back" event="back"/>
-            <input t:type="submit" value="Pay"></input>
+            <label t:type="label" for="numberOfCreditCard"/>
+            <input t:type="textfield" t:id="numberOfCreditCard" value="numberOfCreditCard"
+                   validate="requiredMinMax, hasdigits=5"/>
+            <t:error for="numberOfCreditCard"/>
+        </div>
+        <input t:type="submit" value="Back" event="back"/>
+        <input t:type="submit" value="Pay"></input>
+        <div>
         </div>
     </form>
     </body>

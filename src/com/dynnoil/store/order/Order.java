@@ -44,6 +44,11 @@ public class Order implements Serializable {
     private Date recievedDate;
 
     /**
+     * Address to ship to
+     */
+    private Address shippingAddress;
+
+    /**
      * Default constructor
      */
     public Order() {
@@ -51,6 +56,7 @@ public class Order implements Serializable {
         this.goods = new ArrayList<Goods>();
         this.total = 0;
         this.currentDate = new Date();
+        this.shippingAddress = new Address();
     }
 
     /**
@@ -120,6 +126,24 @@ public class Order implements Serializable {
      */
     public Date getRecievedDate() {
         return this.recievedDate;
+    }
+
+    /**
+     * Setter of shipping address
+     *
+     * @param shippingAddress
+     */
+    public void setShippingAddress(Address shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    /**
+     * Getter of shipping address
+     *
+     * @return shipping address
+     */
+    public Address getShippingAddress() {
+        return this.shippingAddress;
     }
 
     public void removeGoods() {

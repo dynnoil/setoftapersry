@@ -4,13 +4,10 @@
 <p id="forTime">Current time is ${getCurrentTime()}</p>
 <ul>
     <li>
-        <a t:type="actionlink" t:id="toTest">[here is redirection by instance of class page]</a>
+        <a t:type="eventlink" t:id="toOrderPage" event="orderPage">[BUY!!!!BUY!!!!BUY!!!!]</a>
     </li>
     <li>
-        <a t:type="pagelink" page="fortesting" context="['Vasily', 233]">[here is activation context]</a>
-    </li>
-    <li>
-        <a t:type="pagelink" page="orderpage">[BUY!!!!BUY!!!!BUY!!!!]</a>
+        <a t:type="pagelink" page="login">[Log In]</a>
     </li>
 </ul>
 <h4>

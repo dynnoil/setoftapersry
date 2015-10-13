@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tapestry-tapestry (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/tapestry-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

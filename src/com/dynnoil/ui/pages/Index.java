@@ -1,11 +1,10 @@
 package com.dynnoil.ui.pages;
 
+import com.dynnoil.ui.services.AppModule;
 import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.annotations.*;
-import org.apache.tapestry5.corelib.components.Form;
-import org.apache.tapestry5.services.PageRenderLinkSource;
+import org.apache.tapestry5.ioc.annotations.Inject;
 
-import java.sql.Time;
 import java.util.Date;
 import java.util.Random;
 
@@ -19,17 +18,15 @@ public class Index {
     private Integer hours;
     private Integer minutes;
 
+
     @Property
     @Persist(PersistenceConstants.SESSION)
     private Integer randomNumber;
 
-    @InjectPage
-    private ForTesting test;
-
-    Object onActionFromToTest() {
-        test.testVar = "Some";
-        return this.test;
+    Object onOrderPage() {
+        return OrderPage.class;
     }
+
 
     void onActivate() {
         currentDate = new Date();
@@ -49,14 +46,10 @@ public class Index {
      * Method allows you
      * to reset page state
      */
-    @DiscardAfter
-    void onClean() { }
-
-    /*
     void pageReset() {
-        this.randomNumber = 0;
+        currentDate = null;
     }
-    */
+
 
 
 }

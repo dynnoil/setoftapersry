@@ -1,20 +1,23 @@
 package com.dynnoil.store.order;
 
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.beaneditor.DataType;
 
 /**
  * Created by krukov on 07.10.2015.
  */
 public class User {
 
+
+    @Property
     private String name;
+
+    @Property
     private String password;
 
-    public String getName() {
-        return this.name;
-    }
+    @Property
+    private boolean rememberMe;
 
-    public String getPassword() {
-        return this.getPassword();
-    }
+    public  User() { }
+
 }

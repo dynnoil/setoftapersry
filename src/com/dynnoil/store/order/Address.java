@@ -20,6 +20,12 @@ public class Address {
      */
     private Long zipCode;
 
+    public Address() {
+        street = "none";
+        city = "none";
+        zipCode = 0L;
+    }
+
     public String getStreet() {
         return this.street;
     }
@@ -42,6 +48,10 @@ public class Address {
 
     public void setZipCode(Long zipCode) {
         this.zipCode = zipCode;
+    }
+
+    public String toString() {
+        return  street + " " + city + " " + zipCode.toString();
     }
 
 }
