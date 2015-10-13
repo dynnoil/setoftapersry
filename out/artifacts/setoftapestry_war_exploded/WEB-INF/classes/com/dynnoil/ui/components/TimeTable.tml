@@ -1,0 +1,3 @@
+<div style="background-color: red; height: 2.5%; width: 5%; border: solid 1px black;" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+    Time: ${[date.hours, date.minutes]}
+</div>
