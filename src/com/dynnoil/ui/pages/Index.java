@@ -18,6 +18,8 @@ public class Index {
     private Integer hours;
     private Integer minutes;
 
+    @Property
+    private String[] labels;
 
     @Property
     @Persist(PersistenceConstants.SESSION)
@@ -26,7 +28,6 @@ public class Index {
     Object onOrderPage() {
         return OrderPage.class;
     }
-
 
     void onActivate() {
         currentDate = new Date();
@@ -40,6 +41,10 @@ public class Index {
 
     void onNextRandom() {
         randomNumber = new Random().nextInt();
+    }
+
+    void pageLoaded() {
+        labels = new String[] {"Name","Password", "ConfirmPassword"};
     }
 
     /**

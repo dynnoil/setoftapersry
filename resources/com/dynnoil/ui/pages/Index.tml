@@ -10,13 +10,12 @@
         <a t:type="pagelink" page="login">[Log In]</a>
     </li>
 </ul>
-<h4>
-    Look at the random number: ${getRandomNumber()}
-</h4>
 <a t:type="eventlink" event="nextRandom">Random</a>
 <label t:type="timetable"/>
 
-<t:simpleloop source="1..6" value="var:myVar">
-    <p>2476668</p>
-</t:simpleloop>
+<t:mylabel value="10000" times="5" element="h1"/>
+
+
+<t:inputfields labels="labels"/>
+
 </html>
