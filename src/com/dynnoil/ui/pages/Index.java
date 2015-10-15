@@ -1,8 +1,11 @@
 package com.dynnoil.ui.pages;
 
+import com.dynnoil.store.order.Order;
+import com.dynnoil.ui.mixins.CkEditor;
 import com.dynnoil.ui.services.AppModule;
 import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.annotations.*;
+import org.apache.tapestry5.corelib.components.TextArea;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
 import java.util.Date;
@@ -22,12 +25,22 @@ public class Index {
     private String[] labels;
 
     @Property
+    private String content;
+
+
+
+
+
+    @Property
     @Persist(PersistenceConstants.SESSION)
     private Integer randomNumber;
 
     Object onOrderPage() {
         return OrderPage.class;
     }
+
+    @SessionState
+    private Order usersOrder;
 
     void onActivate() {
         currentDate = new Date();
@@ -45,6 +58,7 @@ public class Index {
 
     void pageLoaded() {
         labels = new String[] {"Name","Password", "ConfirmPassword"};
+        usersOrder = new Order();
     }
 
     /**
@@ -54,6 +68,7 @@ public class Index {
     void pageReset() {
         currentDate = null;
     }
+
 
 
 

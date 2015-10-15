@@ -34,13 +34,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/properties" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ckeditor_4.5.4_standard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ckeditor" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 6.0.44" level="application_server_libraries" />
-    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 6.0.44" level="application_server_libraries" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="library" name="tapestry-tapestry" level="project" />
-    <orderEntry type="library" name="shiro-core-1.2.4" level="project" />
-    <orderEntry type="library" name="tapestry-tapestry (2)" level="project" />
   </component>
 </module>

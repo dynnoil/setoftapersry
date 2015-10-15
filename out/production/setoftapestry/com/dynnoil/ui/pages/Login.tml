@@ -2,5 +2,8 @@
         xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
 
 <div t:type="guessnumber" max="10" min="0"/>
-
+<form t:type="form">
+        <t:errors/>
+        <input t:type="textarea" t:id="textarea"/>
+</form>
 </html>

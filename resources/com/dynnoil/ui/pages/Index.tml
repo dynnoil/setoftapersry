@@ -7,15 +7,10 @@
         <a t:type="eventlink" t:id="toOrderPage" event="orderPage">[BUY!!!!BUY!!!!BUY!!!!]</a>
     </li>
     <li>
-        <a t:type="pagelink" page="login">[Log In]</a>
+        <a t:type="pagelink" page="login">[Duke's game]</a>
     </li>
 </ul>
 <a t:type="eventlink" event="nextRandom">Random</a>
 <label t:type="timetable"/>
-
-<t:mylabel value="10000" times="5" element="h1"/>
-
-
-<t:inputfields labels="labels"/>
 
 </html>
