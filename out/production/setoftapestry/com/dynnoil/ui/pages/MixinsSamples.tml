@@ -1,0 +1,7 @@
+<html t:type="layout"
+        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<form t:type="form">
+    <input t:type="textarea" value="content" t:mixins="ckeditor" skin="office2013"/>
+</form>
+
+</html>

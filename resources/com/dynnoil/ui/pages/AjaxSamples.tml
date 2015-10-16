@@ -5,4 +5,8 @@
 
 <t:zonedemo value="50"/>
 
+<t:jsondemo/>
+
+<div t:type="inplaceeditor" value="edit"/>
+
 </html>

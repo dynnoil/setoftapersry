@@ -6,7 +6,7 @@
 
     <span id="status"/>
 
-    <t:zone t:id="numberZone"/>
+    <t:zone t:id="numberZone" update="squish"/>
 
     <!--
     <t:block t:id="numberBlock">

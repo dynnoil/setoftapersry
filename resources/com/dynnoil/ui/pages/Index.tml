@@ -14,5 +14,8 @@
     <li>
         <a t:type="pagelink" page="ajaxsamples">[Samples from Ajax Section here]</a>
     </li>
+    <li>
+        <a t:type="pagelink" page="mixinssamples">[Samples from Mixins Section here]</a>
+    </li>
 </ul>
 </html>

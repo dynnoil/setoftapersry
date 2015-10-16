@@ -1,11 +1,9 @@
 package com.dynnoil.ui.mixins;
 
 import org.apache.tapestry5.Asset;
+import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.ClientElement;
-import org.apache.tapestry5.annotations.Import;
-import org.apache.tapestry5.annotations.InjectContainer;
-import org.apache.tapestry5.annotations.MixinAfter;
-import org.apache.tapestry5.annotations.Path;
+import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
@@ -14,11 +12,11 @@ import org.apache.tapestry5.services.javascript.JavaScriptSupport;
  */
 
 
-@MixinAfter
+@Import(library = "ckeditor/ckeditor.js")
 public class CkEditor {
 
-
-    private Asset ckedit;
+    @Parameter(value = "moono", defaultPrefix = BindingConstants.LITERAL)
+    private String skin;
 
     @InjectContainer
     private ClientElement container;
@@ -26,16 +24,9 @@ public class CkEditor {
     @Inject
     private JavaScriptSupport javaScriptSupport;
 
-    void setupRender()
-    {
-        //javaScriptSupport.importJavaScriptLibrary(ckedit);
-    }
-
     void afterRender(){
-       // javaScriptSupport.importJavaScriptLibrary(ckedit);
-        //javaScriptSupport.addScript("ckeditor/CKEDITOR.replace( '%s' );",
-          //      container.getClientId());
-        //javaScriptSupport.addScript(ckedit.toString().replace(), container.getClientId());
+        javaScriptSupport.addScript("CKEDITOR.replace( '%s', { skin: '%s' } );",
+                container.getClientId(), skin);
     }
 
 

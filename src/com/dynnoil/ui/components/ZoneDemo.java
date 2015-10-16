@@ -19,6 +19,7 @@ import java.util.Date;
 /**
  * Created by krukov on 16.10.2015.
  */
+@Import(library = "effect.js")
 public class ZoneDemo {
 
     @Persist
