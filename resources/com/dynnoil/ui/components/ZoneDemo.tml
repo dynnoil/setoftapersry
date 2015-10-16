@@ -1,0 +1,19 @@
+<div xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+
+    <!--
+    <t:zone t:id="statusZone"/>
+    !-->
+
+    <span id="status"/>
+
+    <t:zone t:id="numberZone"/>
+
+    <!--
+    <t:block t:id="numberBlock">
+        <p>Current value: ${number}</p>
+    </t:block>
+    !-->
+
+    <a t:type="eventlink" event="increment" zone="numberZone">Increment</a>
+
+</div>

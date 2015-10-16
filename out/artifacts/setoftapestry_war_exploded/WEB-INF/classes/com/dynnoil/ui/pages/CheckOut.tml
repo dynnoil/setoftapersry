@@ -1,40 +1,40 @@
 <html t:type="layout"
-        xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-    <head>
-        <title>Hello World Page</title>
-    </head>
-    <body>
-        <h1>Your order:</h1>
-        <div>
-            <h3>
-                <span>Order's ID:</span> ${getID()}
-            </h3>
-            <p>
-                Orders' date: ${getCurrentDate()}
-            </p>
-            <p>
-                Recieving date: ${getRecievedDate()}
-            </p>
-            <p>Address: ${address}</p>
-            <h3>Your goods:</h3>
-            <ul style="font-size: 12px" t:type="loop" source="goods" value="var:Good">
-                <li>${var:Good}</li>
-            </ul>
-            <h3>
-                Total: ${getTotalSum()} RU
-            </h3>
-        </div>
-    <form t:type="form" clientValidation="none" t:id="checkPlease">
-        <div>
-            <label t:type="label" for="numberOfCreditCard"/>
-            <input t:type="textfield" t:id="numberOfCreditCard" value="numberOfCreditCard"
-                   validate="requiredMinMax, hasdigits=5"/>
-            <t:error for="numberOfCreditCard"/>
-        </div>
-        <input t:type="submit" value="Back" event="back"/>
-        <input t:type="submit" value="Pay"></input>
-        <div>
-        </div>
-    </form>
-    </body>
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<h1>Your order:</h1>
+
+<div>
+    <h3>
+        <span>Order's ID:</span> ${getID()}
+    </h3>
+
+    <p>
+        Orders' date: ${getCurrentDate()}
+    </p>
+
+    <p>
+        Recieving date: ${getRecievedDate()}
+    </p>
+
+    <p>Address: ${address}</p>
+
+    <h3>Your goods:</h3>
+    <ul style="font-size: 12px" t:type="loop" source="goods" value="var:Good">
+        <li>${var:Good}</li>
+    </ul>
+    <h3>
+        Total: ${getTotalSum()} RU
+    </h3>
+</div>
+<form t:type="form" clientValidation="none" t:id="checkPlease">
+<div>
+    <label t:type="label" for="numberOfCreditCard"/>
+    <input t:type="textfield" t:id="numberOfCreditCard" value="numberOfCreditCard"
+           validate="requiredMinMax, hasdigits=5"/>
+    <t:error for="numberOfCreditCard"/>
+</div>
+<input t:type="submit" value="Back" event="back"/>
+<input t:type="submit" value="Pay"></input>
+
+<div>
+</div>
 </html>

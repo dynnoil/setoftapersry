@@ -1,7 +1,6 @@
 <html t:type="layout"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-<h1>Index page</h1>
-<p id="forTime">Current time is ${getCurrentTime()}</p>
+<h1>Where to go?</h1>
 <ul>
     <li>
         <a t:type="eventlink" t:id="toOrderPage" event="orderPage">[BUY!!!!BUY!!!!BUY!!!!]</a>
@@ -9,10 +8,11 @@
     <li>
         <a t:type="pagelink" page="login">[Duke's game]</a>
     </li>
+    <li>
+        <a t:type="pagelink" page="beanstesting">[Let's Explore Beans (with Ajax)]</a>
+    </li>
+    <li>
+        <a t:type="pagelink" page="ajaxsamples">[Samples from Ajax Section here]</a>
+    </li>
 </ul>
-<a t:type="eventlink" event="nextRandom">Random</a>
-<label t:type="timetable"/>
-
-<t:timerfield/>
-
 </html>
