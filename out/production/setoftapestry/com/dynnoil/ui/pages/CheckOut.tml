@@ -29,12 +29,11 @@
 <div>
     <label t:type="label" for="numberOfCreditCard"/>
     <input t:type="textfield" t:id="numberOfCreditCard" value="numberOfCreditCard"
-           validate="requiredMinMax, hasdigits=5"/>
+           validate="requiredMinMax, hasdigit=5"/>
     <t:error for="numberOfCreditCard"/>
 </div>
+
 <input t:type="submit" value="Back" event="back"/>
 <input t:type="submit" value="Pay"></input>
-
-<div>
-</div>
+</form>
 </html>

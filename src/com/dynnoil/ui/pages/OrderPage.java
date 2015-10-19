@@ -3,6 +3,8 @@ package com.dynnoil.ui.pages;
 import com.dynnoil.store.order.Address;
 import com.dynnoil.store.order.Goods;
 import com.dynnoil.store.order.Order;
+import com.dynnoil.taggs.OldCustomer;
+import com.dynnoil.ui.services.CustomerInfo;
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.annotations.InjectComponent;
@@ -14,6 +16,7 @@ import org.apache.tapestry5.corelib.components.DateField;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.ioc.annotations.InjectService;
 import org.apache.tapestry5.services.ValueEncoderSource;
 import org.apache.tapestry5.util.EnumSelectModel;
 
@@ -51,6 +54,18 @@ public class OrderPage {
 
     @Inject
     private Messages messages;
+
+    /**
+     * Injected service by tag
+     */
+    @Inject @OldCustomer
+    CustomerInfo customerInfo;
+
+    /**
+     * Injecting service by its ID
+     */
+    @InjectService("CustomerInfoId")
+    CustomerInfo customerInfoProbe;
 
     /**
      * Service for creating value encoder

@@ -1,9 +1,8 @@
 package com.dynnoil.ui.services;
 
+import com.dynnoil.taggs.OldCustomer;
 import org.apache.tapestry5.Validator;
-import org.apache.tapestry5.ioc.MappedConfiguration;
-import org.apache.tapestry5.ioc.OrderedConfiguration;
-import org.apache.tapestry5.ioc.Resource;
+import org.apache.tapestry5.ioc.*;
 import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Value;
 import org.apache.tapestry5.services.FieldValidatorSource;
@@ -25,7 +24,7 @@ public class AppModule {
     @Contribute(FieldValidatorSource.class)
     public static void addValidators(
             MappedConfiguration<String, Validator> configuration) {
-        configuration.add("hasdigits", new
+        configuration.add("hasdigit", new
                 HasDigits());
     }
 
@@ -35,5 +34,19 @@ public class AppModule {
             Resource resource,
             OrderedConfiguration<Resource> configuration) {
         configuration.add("Messages", resource);
+    }
+
+    public static void bind(ServiceBinder binder) {
+        binder.bind(CustomerInfo.class).eagerLoad()
+        .withId("CustomerInfoId");
+        binder.bind(CustomerInfo.class, OldCustomerInfo.class)
+                .withId("OldsCustomerId")
+                .withMarker(OldCustomer.class);
+    }
+
+
+    @Contribute(CustomerInfo.class)
+    public static void addNumbers(Configuration<String> configuration) {
+        configuration.add("+79211401232");
     }
 }

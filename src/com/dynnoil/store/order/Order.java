@@ -147,9 +147,8 @@ public class Order implements Serializable {
     }
 
     public void removeGoods() {
-        for (int  i = 0; i < goods.size(); i++ ) {
+        for (int i = 0; i < goods.size(); i++) {
             goods.remove(i);
         }
     }
-
 }
